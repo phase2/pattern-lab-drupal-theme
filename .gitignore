@@ -1,0 +1,20 @@
+# Compiled files
+dest/
+src/scss/00-config/_icons.scss
+src/patterns/00-atoms/04-images/icons.mustache
+src/patternlab-css/*.css
+
+# OS generated files
+.DS_Store
+.DS_Store?
+
+# Dependencies
+bower_components
+node_modules
+
+# Generated files
+*.sass-cache/
+
+#IDE plugins
+.idea
+atlassian-ide-plugin.xml

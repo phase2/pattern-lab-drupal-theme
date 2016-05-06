@@ -1,0 +1,22 @@
+{
+  "name": "patternlab",
+  "version": "0.0.0",
+  "description": "Components for PL work via Bower",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "lodash": "~3.6.0",
+    "modernizr": "~2.8.3"
+  },
+  "devDependencies": {
+    "drupal": "http://cgit.drupalcode.org/drupal/plain/misc/drupal.js?h=7.x",
+    "jquery": "~1.10.2"
+  }
+}

@@ -1,0 +1,91 @@
+css:
+  enabled: true
+  src:
+    - scss/**/*.scss
+  dest: dest/
+  flattenDestOutput: true
+  lint:
+    enabled: true
+    failOnError: true
+  sourceComments: false
+  sourceMapEmbed: false
+  outputStyle: expanded
+  autoPrefixerBrowsers:
+    - last 2 versions
+    - IE >= 9
+  includePaths:
+    - ./node_modules
+  sassdoc:
+    enabled: false
+    dest: dest/sassdoc
+    verbose: false
+    basePath: >-
+      https://bitbucket.org/phase2tech/score-web/src/develop/src/themes/score/src/scss
+    theme: default
+    sort:
+      - file
+      - group
+      - line>
+js:
+  enabled: true
+  src:
+    - js/**/*.js
+  dest: dest/
+  destName: all.min.js
+  sourceMapEmbed: false
+  uglify: false
+  babel: false
+  eslint:
+    enabled: true
+    src:
+      - js/**/*.js
+      - gulpfile.js
+patternLab:
+  enabled: true
+  src:
+    root: pattern-lab
+  injectFiles: null
+  injectBower: true
+icons:
+  enabled: true
+  src: images/icons/src/*.svg
+  dest: dest/
+  fontPathPrefix: ''
+  classNamePrefix: icon
+  autohint: false
+  normalize: true
+  templates:
+    enabled: true
+    css:
+      src: images/icons/templates/_icons.scss
+      dest: scss/00-config/
+    demo:
+      src: images/icons/templates/icons.twig
+      dest: pattern-lab/source/00-atoms/images/
+  formats:
+    - ttf
+    - eot
+    - woff
+    - svg
+browserSync:
+  enabled: true
+  port: 3050
+  watchFiles: null
+  baseDir: ./
+  startPath: pattern-lab/public
+  openBrowserAtStart: false
+  browser:
+    - Google Chrome
+  tunnel: false
+  reloadDelay: 50
+  reloadDebounce: 750
+drupal:
+  enabled: false
+  watch:
+    - template.php
+    - templates/**
+  command: drush cc all
+  dir: ./
+  inject:
+    bower: true
+    file: theme.info

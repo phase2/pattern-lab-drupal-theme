@@ -1,0 +1,17 @@
+name: patternlab
+description: A Drupal theme whose Twig templates are integrated with Pattern Lab.
+type: theme
+screenshot: screenshot.png
+base theme: classy
+core: 8.x
+# Defines libraries group in which we can add css/js.
+libraries:
+  - patternlab/global-styling
+# Regions
+regions:
+  header: Header
+  featured: Featured
+  content: Content
+  sidebar_first: First sidebar
+  sidebar_second: Second sidebar
+  footer: Footer
