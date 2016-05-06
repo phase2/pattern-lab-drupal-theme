@@ -51,14 +51,5 @@
         "pre-package-uninstall": [
             "PatternLab\\Installer::prePackageUninstall"
         ]
-    },
-    "extra": {
-        "patternlab": {
-            "starterKitSuggestions": [
-                "pattern-lab/starterkit-twig-drupal-minimal",
-                "pattern-lab/starterkit-twig-demo",
-                "aleksip/starterkit-shila-drupal-theme"
-            ]
-        }
     }
 }
