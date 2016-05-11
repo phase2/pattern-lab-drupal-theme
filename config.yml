@@ -2,7 +2,7 @@ css:
   enabled: true
   src:
     - scss/**/*.scss
-  dest: dest/
+  dest: dist/
   flattenDestOutput: true
   lint:
     enabled: true
@@ -17,10 +17,8 @@ css:
     - ./node_modules
   sassdoc:
     enabled: false
-    dest: dest/sassdoc
+    dest: dist/sassdoc
     verbose: false
-    basePath: >-
-      https://bitbucket.org/phase2tech/score-web/src/develop/src/themes/score/src/scss
     theme: default
     sort:
       - file
@@ -30,7 +28,7 @@ js:
   enabled: true
   src:
     - js/**/*.js
-  dest: dest/
+  dest: dist/
   destName: all.min.js
   sourceMapEmbed: false
   uglify: false
@@ -43,30 +41,10 @@ js:
 patternLab:
   enabled: true
   src:
-    root: pattern-lab
+    root: pattern-lab/
+    source: pattern-lab/source/
   injectFiles: null
   injectBower: true
-icons:
-  enabled: true
-  src: images/icons/src/*.svg
-  dest: dest/
-  fontPathPrefix: ''
-  classNamePrefix: icon
-  autohint: false
-  normalize: true
-  templates:
-    enabled: true
-    css:
-      src: images/icons/templates/_icons.scss
-      dest: scss/00-config/
-    demo:
-      src: images/icons/templates/icons.twig
-      dest: pattern-lab/source/00-atoms/images/
-  formats:
-    - ttf
-    - eot
-    - woff
-    - svg
 browserSync:
   enabled: true
   port: 3050
@@ -79,13 +57,3 @@ browserSync:
   tunnel: false
   reloadDelay: 50
   reloadDebounce: 750
-drupal:
-  enabled: false
-  watch:
-    - template.php
-    - templates/**
-  command: drush cc all
-  dir: ./
-  inject:
-    bower: true
-    file: theme.info
